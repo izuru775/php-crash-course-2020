@@ -11,7 +11,12 @@
 <?php
   echo "Hello World";
   echo " and PHP";
-
+?>
+<?php
+  echo '<br>';
+  echo '<button>Click me</button>';
+  echo '<br>';
+  echo "Hello from another tag"; 
 ?>
 </body>
 </html>

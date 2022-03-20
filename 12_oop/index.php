@@ -1,54 +1,31 @@
 <?php
 
 // What is class and instance
-class Person{
-    public $name;
-    public $surname;
-    private $age;
-    private static $counter = 0;
+require_once "Person.php";
+require_once "Student.php";
 
-    public function __construct($name,$surname)
-    {
-        $this->name = $name;
-        $this->surname = $surname;
-        self::$counter++;
-    }
-
-    public function setAge($age){
-        $this->age =$age;
-    }
-
-    public function getAge(){
-        return $this->age;
-    }
-
-    public static function getCounter(){
-        return self::$counter;
-    }
-}
-
-$person = new Person("Brad","Traversy");
-$person->setAge(30);
+$student = new Student("Sodi","Adikaram",123456);
 
 echo '<pre>';
-var_dump($person);
+var_dump($student);
 echo '<pre>';
 
-echo $person->name.'<br>';
-echo $person->getAge();
+// $person = new Person("Brad","Traversy");
+// $person->setAge(30);
 
-$person2= new Person("Sodi","Adikaram");
+// echo '<pre>';
+// var_dump($person);
+// echo '<pre>';
 
-echo '<pre>';
-var_dump($person2);
-echo '<pre>';
+// echo $person->name.'<br>';
+// echo $person->getAge();
+
+// $person2= new Person("Sodi","Adikaram");
+
+// echo '<pre>';
+// var_dump($person2);
+// echo '<pre>';
 
 
-echo Person::getCounter(); // Access to static properties using double colone(::)
+// echo Person::getCounter(); // Access to static properties using double colone(::)
 // echo $person2->name.'<br>';
-
-// Create Person class in Person.php
-
-// Create instance of Person
-
-// Using setter and getter
